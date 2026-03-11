@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Texture Studio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/png" href="Images/icon-05.webp">
+</head>
+
+
+<body>
+
+    <header class="topbar">
+        <button class="icon-btn" id="openMenuBtn" aria-label="Open menu">☰</button>
+
+        <div class="top-logo">
+            <a href="index.html"><img src="Images/logo-06.webp " alt="Texture Studio logo" class="logo-img"></a>
+        </div>
+
+        <div class="cart-summary">
+            <div class="cart-text">
+                <span>Items: <span id="cartCount">0</span></span>
+            </div>
+
+            <div class="cart-icon">🛒</div>
+        </div>
+    </header>
+
+    <!-- SIDE MENU -->
+    <nav class="side-menu" id="sideMenu" aria-hidden="true">
+        <div class="side-menu-header">
+            <button class="icon-btn" id="closeMenuBtn" aria-label="Close menu">✕</button>
+        </div>
+        <a href="index.html">Home</a>
+        <a href="mugs.html">Mugs</a>
+        <a href="shirts.html" class="active">Shirts</a>
+        <a href="candles.html">Candles</a>
+    </nav>
+
+    <div class="overlay" id="overlay" hidden></div>
+
+    <main class="page" data-category="shirts">
+        <h1 class="page-title">T-Shirts and Hoodies</h1>
+        <p class="subtitle">
+            Explore our customizable t-shirts and hoodies designed for comfort and personal style. Add your own text or
+            design to create a
+            unique shirt for any occasion.
+        </p>
+
+        <section class="product-layout">
+
+            <!-- LEFT PRODUCT CARD -->
+            <article class="product-card">
+                <div class="img-frame">
+                    <!-- Image changes when dropdown changes -->
+                    <img id="leftImg" src="images/placeholder-small-1.webp" alt="Selected item image"
+                        class="product-img">
+                    <!-- Put your images in /images and rename them -->
+                </div>
+
+                <div class="product-info">
+                    <h2 id="leftTitle">Small Candle</h2>
+
+                    <!-- Short text you can replace -->
+                    <p id="leftDesc" class="muted">
+                        A short description here (easy to replace). Example: “Great for gifts and cozy vibes.”
+                    </p>
+
+                    <p class="price">Price: $<span id="leftPrice">14.50</span></p>
+
+                    <!-- Dropdown that works -->
+                    <label class="label">Choose an option:</label>
+                    <select id="leftSelect" class="select"></select>
+
+                    <!-- Qty controls -->
+                    <div class="qty-row">
+                        <button class="qty-btn" type="button" data-qty="left" data-action="dec">-</button>
+                        <span id="leftQty" class="qty-number">1</span>
+                        <button class="qty-btn" type="button" data-qty="left" data-action="inc">+</button>
+                    </div>
+
+                    <!-- Add to cart -->
+                    <button class="btn" type="button" id="leftAddBtn">Add</button>
+                </div>
+            </article>
+
+            <!-- RIGHT PRODUCT CARD -->
+            <article class="product-card">
+                <div class="img-frame">
+                    <img id="rightImg" src="images/placeholder-tall-1.webp" alt="Selected item image"
+                        class="product-img">
+                </div>
+
+                <div class="product-info">
+                    <h2 id="rightTitle">Tall Candle</h2>
+
+                    <p id="rightDesc" class="muted">
+                        A short description here (easy to replace). Example: “Long-lasting scent with custom label
+                        options.”
+                    </p>
+
+                    <p class="price">Price: $<span id="rightPrice">18.50</span></p>
+
+                    <label class="label">Choose an option:</label>
+                    <select id="rightSelect" class="select"></select>
+
+                    <div class="qty-row">
+                        <button class="qty-btn" type="button" data-qty="right" data-action="dec">-</button>
+                        <span id="rightQty" class="qty-number">1</span>
+                        <button class="qty-btn" type="button" data-qty="right" data-action="inc">+</button>
+                    </div>
+
+                    <button class="btn" type="button" id="rightAddBtn">Add</button>
+                </div>
+            </article>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="social-row">
+            <span><a href="https://www.facebook.com/" target="_blank"><img src="Images/facebookLogo.webp"
+                        alt="facebook icon" width="25" height="25" style="margin-right: 10px;"></a></span>
+            <span><a href="https://www.instagram.com/" target="_blank"><img src="Images/instagramLogo.webp"
+                        alt="instagram logo" width="15" height="15" style="margin-right: 12px;"></a></span>
+            <span><a href="https://www.etsy.com/" target="_blank"><img src="Images/etsyLogo.webp" alt="etsy image"
+                        width="20" height="20"></span></a>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
